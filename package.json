@@ -1,0 +1,35 @@
+{
+  "name": "gnw",
+  "version": "1.0.0",
+  "description": "A Girl and a Wolf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psychobunny/gnw.git"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "express": "^4.13.3",
+    "grunt": "~0.4.5",
+    "grunt-browserify": "^4.0.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-less": "^0.12.0",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express-server": "^0.4.19",
+    "grunt-supervisor": "^0.2.4",
+    "jquery": "~2.1.0"
+  },
+  "author": "psychobunny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/psychobunny/gnw/issues"
+  },
+  "homepage": "https://github.com/psychobunny/gnw#readme",
+  "dependencies": {
+    "templates.js": "^0.3.10"
+  }
+}
