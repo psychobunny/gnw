@@ -30,6 +30,9 @@
   },
   "homepage": "https://github.com/psychobunny/gnw#readme",
   "dependencies": {
-    "templates.js": "^0.3.10"
+    "async": "^2.2.0",
+    "fabric": "^1.7.9",
+    "templates.js": "^0.3.10",
+    "winston": "^2.3.1"
   }
 }

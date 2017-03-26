@@ -1,5 +1,7 @@
 "use strict";
 
-var utils = require('./lib/utils');
+var canvas = require('./lib/canvas');
+var ui = require('./lib/editor/ui');
 
-console.log(utils.walk);
+canvas.init();
+ui.init();

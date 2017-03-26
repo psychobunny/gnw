@@ -8,6 +8,15 @@
 		fs = require('fs');
 	}
 
+	utils.invalidLatinChars = /[^\w\s\d\-_]/g;
+	utils.trimRegex = /^\s+|\s+$/g;
+	utils.collapseWhitespace = /\s+/g;
+	utils.collapseDash = /-+/g;
+	utils.trimTrailingDash = /-$/g;
+	utils.trimLeadingDash = /^-/g;
+	utils.isLatin = /^[\w\d\s.,\-@]+$/;
+	utils.languageKeyRegex = /\[\[[\w]+:.+\]\]/;
+	
 	// Adapted from http://stackoverflow.com/questions/5827612/node-js-fs-readdir-recursive-directory-search
 	utils.walk = function (dir, done) {
 		var results = [];
@@ -51,6 +60,21 @@
 		});
 	};
 	
+	// http://dense13.com/blog/2009/05/03/converting-string-to-slug-javascript/
+	utils.slugify = function (str, preserveCase) {
+		if (!str) {
+			return '';
+		}
+		str = str.replace(utils.trimRegex, '');
+		str = str.replace(utils.invalidLatinChars, '-');
+		
+		str = !preserveCase ? str.toLocaleLowerCase() : str;
+		str = str.replace(utils.collapseWhitespace, '-');
+		str = str.replace(utils.collapseDash, '-');
+		str = str.replace(utils.trimTrailingDash, '');
+		str = str.replace(utils.trimLeadingDash, '');
+		return str;
+	};
 
 	module.exports = utils;
 	if (typeof window !== 'undefined') {
