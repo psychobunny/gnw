@@ -2,7 +2,7 @@
 
 ### Installation
 
-Install [node.js](https://nodejs.org/en/download/)
+Install [node.js](https://nodejs.org/en/download/), [git](https://desktop.github.com/)
 
 Run the following:
 
@@ -10,6 +10,6 @@ Run the following:
 
 ### Running
 
-`npm start`
+`grunt`
 
-Visit http://localhost:3000
+Visit http://localhost:3000/editor
